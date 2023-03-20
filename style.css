@@ -11,7 +11,7 @@ html{
 
 body{
     margin: 0 auto;
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     background-image: url("img/fondo.jfif");
     background-size: cover;
     width: 100%;
