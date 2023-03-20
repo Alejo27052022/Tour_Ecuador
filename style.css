@@ -1,3 +1,25 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Black.otf);
+    src: url(fonts/Montserrat-Bold.otf);
+    src: url(fonts/Montserrat-ExtraBold.otf);
+    src: url(fonts/Montserrat-ExtraLight.otf);
+    src: url(fonts/Montserrat-Light.otf);
+    src: url(fonts/Montserrat-Medium.otf);
+    src: url(fonts/Montserrat-Regular.otf);
+    src: url(fonts/Montserrat-SemiBold.otf);
+    src: url(fonts/Montserrat-Thin.otf);
+    src: url(fonts/MontserratAlternates-Black.otf);
+    src: url(fonts/MontserratAlternates-Bold.otf);
+    src: url(fonts/MontserratAlternates-ExtraBold.otf);
+    src: url(fonts/MontserratAlternates-ExtraLight.otf);
+    src: url(fonts/MontserratAlternates-Light.otf);
+    src: url(fonts/MontserratAlternates-Medium.otf);
+    src: url(fonts/MontserratAlternates-Regular.otf);
+    src: url(fonts/MontserratAlternates-SemiBold.otf);
+    src: url(fonts/MontserratAlternates-Thin.otf);
+}
+
 html{
     scroll-behavior: smooth;
 }
