@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
-@font-face{
-    font-family: Montserrat;
-    src: url('Montserrat.ttf') format('truetype');
-}
 
 html{
     scroll-behavior: smooth;
@@ -21,8 +17,15 @@ body{
     flex-wrap: wrap;
 }
 
+.inactive{
+    display: none;
+}
+
+/*Header*/
 .header-class{
     display: flex;
+    height: 100vh;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -72,11 +75,20 @@ header nav ul a li:hover{
     justify-content: center;
 }
 
+.container-div{
+    display: flex;
+    justify-content: start;
+    padding: 50px;
+    align-items: center;
+    height: 70vh;
+}
+
 .container-div-header{
     display: flex;
+    position: absolute;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
 }
 
 .container-div-header p:nth-last-child(2){
@@ -103,38 +115,35 @@ header nav ul a li:hover{
     background: white;
     position: relative;
     width: 100%;
-    height: 450px;
-    flex-wrap: nowrap;
+    z-index: 3;
 }
 
 .container-about img{
     display: flex;
+    position: relative;
     width: 450px;
     height: 350px;
-    margin-left: 50px;
     border-radius: 30px;
 }
 
 .container-about p:nth-last-child(3){
     display: flex;
     position: absolute;
-    top: 5%;
-    left: 45%;
+    top: 0px;
+    padding: 50px;
     font-family: 'Montserrat';
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .container-about p:nth-last-child(2){
     display: flex;
-    position: absolute;
-    top: 25%;
-    left: 45%;
-    width: 600px;
+    position: relative;
+    padding-right: 50px;
     font-family: Calibri;
     font-weight: 300;
     font-size: 20px;
-    text-align: justify;;
+    text-align: justify;
 }
 
 .carousel_elemento img{
@@ -193,10 +202,10 @@ header nav ul a li:hover{
 
 .container-footer{
     display: flex;
+    position: relative;
     background: white;
     height: 700px;
-    justify-content: start;
-    margin-left: 250px;
+    justify-content: center;
 }
 
 .container-footer img{
@@ -263,10 +272,21 @@ header nav ul a li:hover{
     background: #070066;
 }
 
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.container-contact{
+    position: relative;
+}
+
 .container-footer img:nth-child(2){
     display: flex;
     margin-top: 100px;
-    margin-left: 200px;
+    margin-left: 100px;
     width: 400px;
     height: 500px;
     border-radius: 50px;
@@ -307,53 +327,108 @@ footer p{
     margin-top: 30px;
 }
 
+.menu{
+    display: none;
+}
+
+/*Mobile*/
+
+.mobile-menu{
+    background: white;
+    position: absolute;
+    top: 75px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 24px;
+    padding-left: 10px;
+    width: 70%;
+    left: 40px;
+}
+
+.mobile-menu ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.mobile-menu ul li{
+    color: black;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 30px;
+    padding: 5px;
+    width: 110px;
+    border-radius: 25px;
+}
+
+.mobile-menu ul li:hover{
+    padding: 5px;
+    margin-right: 0;
+    color: white;
+    background: rgb(0, 4, 53);
+    width: 110px;
+
+}
+
+.mobile-menu ul a{
+    text-decoration: none;
+}
+
+.mobile-menu img{
+    display: flex;
+    width: 90%;
+    height: 90%;
+    border-radius: 40px;
+}
+
 /*Media Query*/
 
-@media (max-width: 1050px){
-    .container-about{
-        height: 600px;
+@media (max-width: 850px){
+
+    header nav ul{
+        display: none;
     }
 
-    .container-div img{
+    .menu{
+        display: block;
+    }
+
+    .header-class{
         display: flex;
-        margin-top: 50px;
-        margin-left: auto;
-        margin-right: auto;
-
+        justify-content: center;
     }
 
-    .container-div p:nth-child(1){
-        display: flex;
-        margin-top: -100px;
-        left: 42%;
-
+    .nav-class{
+        padding: 40px;
     }
 
-    .container-div p:nth-child(2){
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 250px;
-        left: 20%;
+    .container-about p:nth-last-child(3){
+        position: relative;
+        padding: 0px;
     }
 
-    .carousel_contenedor{
-        width: 100%;
+    .container-about p:nth-last-child(2){
+        padding-right: 0px;
+    }
+
+    .container-about img{
+        width: 80%;
+        height: 70%;
     }
 
     .container-footer img:nth-child(2){
         display: none;
     }
 
-    .container-footer{
+    .container-div{
         justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-
-    footer p{
-        margin-left: -700px;
+        flex-direction: column;
     }
 
 }
 
+@media (min-width: 871px){
+    .mobile-menu{
+        display: none;
+    }
+}
